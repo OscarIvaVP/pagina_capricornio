@@ -39,42 +39,42 @@ def main():
             "nombre": "Pijama de Algodón 'Noches de Ensueño'",
             "descripcion": "Pijama de dos piezas, 100% algodón pima para garantizar la máxima suavidad y frescura.",
             "precio": "COP $89,900",
-            "imagen": "imagenes/pijama_algodon.jpg", # <- CAMBIA ESTO
+            "imagen": "imagenes/pijamaalgodon.jpg", # <- CAMBIA ESTO
             "categoria": "Pijamas"
         },
         {
             "nombre": "Pijama de Satén 'Lujo y Confort'",
             "descripcion": "Elegante y sedosa pijama de satén. Perfecta para sentirte cómoda y sofisticada en casa.",
             "precio": "COP $120,500",
-            "imagen": "imagenes/pijama_saten.jpg", # <- CAMBIA ESTO
+            "imagen": "imagenes/pijamasaten.jpg", # <- CAMBIA ESTO
             "categoria": "Pijamas"
         },
         {
             "nombre": "Pijama Térmica 'Abrazo de Oso'",
             "descripcion": "Ideal para las noches frías. Fabricada en tela polar que te mantendrá siempre abrigada.",
             "precio": "COP $150,000",
-            "imagen": "imagenes/pijama_termica.jpg", # <- CAMBIA ESTO
+            "imagen": "imagenes/pijamatermica.jpg", # <- CAMBIA ESTO
             "categoria": "Pijamas"
         },
         {
             "nombre": "Medias de Lana 'Pies Calentitos'",
             "descripcion": "Pack de 3 pares de medias gruesas de lana. ¡El complemento perfecto para tu pijama!",
             "precio": "COP $35,000",
-            "imagen": "imagenes/medias_lana.jpg", # <- CAMBIA ESTO
+            "imagen": "imagenes/mediaslana.jpg", # <- CAMBIA ESTO
             "categoria": "Medias"
         },
         {
             "nombre": "Medias Tobilleras 'Paso Ligero'",
             "descripcion": "Pack de 5 pares de medias tobilleras de algodón en colores variados. Perfectas para el día a día.",
             "precio": "COP $28,000",
-            "imagen": "imagenes/medias_tobilleras.jpg", # <- CAMBIA ESTO
+            "imagen": "imagenes/mediastobilleras.jpg", # <- CAMBIA ESTO
             "categoria": "Medias"
         },
         {
             "nombre": "Medias Divertidas 'Diseños Únicos'",
             "descripcion": "Dale un toque de alegría a tus pies con nuestros diseños exclusivos. ¡Colecciónalas todas!",
             "precio": "COP $15,000",
-            "imagen": "imagenes/medias_divertidas.jpg", # <- CAMBIA ESTO
+            "imagen": "imagenes/mediasdivertidas.jpg", # <- CAMBIA ESTO
             "categoria": "Medias"
         }
     ]
