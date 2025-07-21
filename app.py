@@ -63,21 +63,21 @@ def main():
             "nombre": "Medias de Lana 'Pies Calentitos'",
             "descripcion": "Pack de 3 pares de medias gruesas de lana. ¡El complemento perfecto para tu pijama!",
             "precio": "COP $35,000",
-            "imagen": "https://placehold.co/400x400/F5CBA7/333333?text=Medias+Lana",
+            "imagen": "productos/mediaslana.png",
             "categoria": "Medias"
         },
         {
             "nombre": "Medias Tobilleras 'Paso Ligero'",
             "descripcion": "Pack de 5 pares de medias tobilleras de algodón en colores variados. Perfectas para el día a día.",
             "precio": "COP $28,000",
-            "imagen": "https://placehold.co/400x400/A3E4D7/333333?text=Medias+Tobilleras",
+            "imagen": "productos/mediastobilleras.png",
             "categoria": "Medias"
         },
         {
             "nombre": "Medias Divertidas 'Diseños Únicos'",
             "descripcion": "Dale un toque de alegría a tus pies con nuestros diseños exclusivos. ¡Colecciónalas todas!",
             "precio": "COP $15,000",
-            "imagen": "https://placehold.co/400x400/F9E79F/333333?text=Medias+Diseños",
+            "imagen": "productos/mediasdisenos.png",
             "categoria": "Medias"
         }
     ]
@@ -120,7 +120,7 @@ def main():
     # --- Pie de Página ---
     st.markdown("---")
     st.markdown("### ¿Tienes alguna pregunta?")
-    st.markdown("Contáctanos por WhatsApp: [+57 300 123 4567](https://wa.me/573001234567) o síguenos en Instagram [@DulcesSuenosPijamas](https://instagram.com).")
+    st.markdown("Contáctanos por WhatsApp: [+57 312 561 4349](https://wa.me/5731256614349) o síguenos en Instagram [@DulcesSuenosPijamas](https://instagram.com).")
 
 
 if __name__ == "__main__":
