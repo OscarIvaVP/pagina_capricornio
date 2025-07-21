@@ -42,7 +42,7 @@ def main():
             "nombre": "Pijama de Algodón 'Noches de Ensueño'",
             "descripcion": "Pijama de dos piezas, 100% algodón pima para garantizar la máxima suavidad y frescura.",
             "precio": "COP $89,900",
-            "imagen": "productos/pijamaalgodon.png",
+            "imagen": "productos/pijamaalgodon.jpg",
             "categoria": "Pijamas"
         },
         {
@@ -56,7 +56,7 @@ def main():
             "nombre": "Pijama Térmica 'Abrazo de Oso'",
             "descripcion": "Ideal para las noches frías. Fabricada en tela polar que te mantendrá siempre abrigada.",
             "precio": "COP $150,000",
-            "imagen": "productos/pijamatermica.png",
+            "imagen": "productos/pijamatermica.jpg",
             "categoria": "Pijamas"
         },
         {
