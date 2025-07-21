@@ -42,21 +42,21 @@ def main():
             "nombre": "Pijama de Algodón 'Noches de Ensueño'",
             "descripcion": "Pijama de dos piezas, 100% algodón pima para garantizar la máxima suavidad y frescura.",
             "precio": "COP $89,900",
-            "imagen": "https://placehold.co/400x400/EAD9F2/333333?text=Pijama+Algodón",
+            "imagen": "productos/pijamaalgodon.png",
             "categoria": "Pijamas"
         },
         {
             "nombre": "Pijama de Satén 'Lujo y Confort'",
             "descripcion": "Elegante y sedosa pijama de satén. Perfecta para sentirte cómoda y sofisticada en casa.",
             "precio": "COP $120,500",
-            "imagen": "https://placehold.co/400x400/D4A5A5/333333?text=Pijama+Satén",
+            "imagen": "productos/pijamasaten.png",
             "categoria": "Pijamas"
         },
         {
             "nombre": "Pijama Térmica 'Abrazo de Oso'",
             "descripcion": "Ideal para las noches frías. Fabricada en tela polar que te mantendrá siempre abrigada.",
             "precio": "COP $150,000",
-            "imagen": "https://placehold.co/400x400/A9CCE3/333333?text=Pijama+Térmica",
+            "imagen": "productos/pijamatermica.png",
             "categoria": "Pijamas"
         },
         {
