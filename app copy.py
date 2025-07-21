@@ -17,19 +17,15 @@ def main():
     """
 
     # --- Configuración de la Página ---
-    # Esto establece el título que aparece en la pestaña del navegador y el layout.
     st.set_page_config(
-        page_title="Catálogo Dulces Sueños",
-        page_icon="🌙",
+        page_title="Catálogo CAPRICORNO",
+        page_icon="♑",
         layout="wide"
     )
 
     # --- Contenido del Catálogo ---
-
-    # Título principal de la página
-    st.title("🌙 Catálogo Dulces Sueños 🧦")
-    st.markdown("---")
-    st.markdown("### ¡Bienvenido a nuestro rincón de comodidad! Explora nuestra selección especial de pijamas y medias.")
+    st.markdown("<h1 style='text-align: center; font-size: 4em; font-weight: bold;'>CAPRICORNO</h1>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center;'>Catálogo</h2>", unsafe_allow_html=True)
     st.markdown("---")
 
 
