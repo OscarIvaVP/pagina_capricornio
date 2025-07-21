@@ -24,7 +24,7 @@ def main():
     )
 
     # --- Contenido del Catálogo ---
-    st.markdown("<h1 style='text-align: center; font-size: 3em; font-weight: bold;'>CAPRICORNO</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; font-size: 4em; font-weight: bold;'>TIENDA</h1>", unsafe_allow_html=True)
     # **CAMBIO**: Se añade el logo de la empresa desde una carpeta local.
     # Se usan columnas para centrar el logo en la página.
     col1, col2, col3 = st.columns([2,1,2])
