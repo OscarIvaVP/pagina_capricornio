@@ -1,0 +1,126 @@
+# -*- coding: utf-8 -*-
+"""
+Una aplicación web sencilla con Streamlit para mostrar un catálogo de pijamas y medias.
+
+Para ejecutar esta aplicación:
+1. Instala Streamlit: pip install streamlit
+2. Guarda este código en un archivo, por ejemplo, `app.py`.
+3. Ejecuta el siguiente comando en tu terminal: streamlit run app.py
+"""
+
+import streamlit as st
+
+def main():
+    """
+    Función principal que construye la página web del catálogo.
+    """
+
+    # --- Configuración de la Página ---
+    # Esto establece el título que aparece en la pestaña del navegador y el layout.
+    st.set_page_config(
+        page_title="Catálogo Dulces Sueños",
+        page_icon="🌙",
+        layout="wide"
+    )
+
+    # --- Contenido del Catálogo ---
+
+    # Título principal de la página
+    st.title("🌙 Catálogo Dulces Sueños 🧦")
+    st.markdown("---")
+    st.markdown("### ¡Bienvenido a nuestro rincón de comodidad! Explora nuestra selección especial de pijamas y medias.")
+    st.markdown("---")
+
+
+    # --- Lista de Productos ---
+    # Usamos una lista de diccionarios para almacenar la información de cada producto.
+    # Esto facilita agregar, eliminar o modificar productos en el futuro.
+    # Las URLs de las imágenes son de un servicio de placeholders. ¡Recuerda cambiarlas por tus propias fotos!
+    productos = [
+        {
+            "nombre": "Pijama de Algodón 'Noches de Ensueño'",
+            "descripcion": "Pijama de dos piezas, 100% algodón pima para garantizar la máxima suavidad y frescura.",
+            "precio": "COP $89,900",
+            "imagen": "https://placehold.co/400x400/EAD9F2/333333?text=Pijama+Algodón",
+            "categoria": "Pijamas"
+        },
+        {
+            "nombre": "Pijama de Satén 'Lujo y Confort'",
+            "descripcion": "Elegante y sedosa pijama de satén. Perfecta para sentirte cómoda y sofisticada en casa.",
+            "precio": "COP $120,500",
+            "imagen": "https://placehold.co/400x400/D4A5A5/333333?text=Pijama+Satén",
+            "categoria": "Pijamas"
+        },
+        {
+            "nombre": "Pijama Térmica 'Abrazo de Oso'",
+            "descripcion": "Ideal para las noches frías. Fabricada en tela polar que te mantendrá siempre abrigada.",
+            "precio": "COP $150,000",
+            "imagen": "https://placehold.co/400x400/A9CCE3/333333?text=Pijama+Térmica",
+            "categoria": "Pijamas"
+        },
+        {
+            "nombre": "Medias de Lana 'Pies Calentitos'",
+            "descripcion": "Pack de 3 pares de medias gruesas de lana. ¡El complemento perfecto para tu pijama!",
+            "precio": "COP $35,000",
+            "imagen": "https://placehold.co/400x400/F5CBA7/333333?text=Medias+Lana",
+            "categoria": "Medias"
+        },
+        {
+            "nombre": "Medias Tobilleras 'Paso Ligero'",
+            "descripcion": "Pack de 5 pares de medias tobilleras de algodón en colores variados. Perfectas para el día a día.",
+            "precio": "COP $28,000",
+            "imagen": "https://placehold.co/400x400/A3E4D7/333333?text=Medias+Tobilleras",
+            "categoria": "Medias"
+        },
+        {
+            "nombre": "Medias Divertidas 'Diseños Únicos'",
+            "descripcion": "Dale un toque de alegría a tus pies con nuestros diseños exclusivos. ¡Colecciónalas todas!",
+            "precio": "COP $15,000",
+            "imagen": "https://placehold.co/400x400/F9E79F/333333?text=Medias+Diseños",
+            "categoria": "Medias"
+        }
+    ]
+
+    # --- Sección de Pijamas ---
+    st.header("Nuestras Pijamas")
+    # Filtramos la lista para obtener solo las pijamas
+    pijamas = [p for p in productos if p["categoria"] == "Pijamas"]
+    # Creamos 3 columnas para mostrar los productos
+    cols_pijamas = st.columns(3)
+    for i, producto in enumerate(pijamas):
+        # Usamos el operador de módulo para distribuir los productos en las columnas
+        with cols_pijamas[i % 3]:
+            st.image(producto["imagen"], caption=producto["nombre"], use_column_width=True)
+            st.subheader(producto["nombre"])
+            st.write(producto["descripcion"])
+            st.success(f"**Precio:** {producto['precio']}")
+            # El botón de compra puede ser un enlace a WhatsApp o simplemente mostrar un mensaje
+            if st.button(f"Comprar {producto['nombre']}", key=f"pijama_{i}"):
+                st.toast(f"¡'{producto['nombre']}' añadido al carrito!", icon="🛒")
+
+
+    st.markdown("---")
+
+    # --- Sección de Medias ---
+    st.header("Nuestras Medias")
+    # Filtramos la lista para obtener solo las medias
+    medias = [p for p in productos if p["categoria"] == "Medias"]
+    # Creamos otras 3 columnas para las medias
+    cols_medias = st.columns(3)
+    for i, producto in enumerate(medias):
+        with cols_medias[i % 3]:
+            st.image(producto["imagen"], caption=producto["nombre"], use_column_width=True)
+            st.subheader(producto["nombre"])
+            st.write(producto["descripcion"])
+            st.info(f"**Precio:** {producto['precio']}")
+            if st.button(f"Comprar {producto['nombre']}", key=f"media_{i}"):
+                st.toast(f"¡'{producto['nombre']}' añadido al carrito!", icon="🛒")
+
+    # --- Pie de Página ---
+    st.markdown("---")
+    st.markdown("### ¿Tienes alguna pregunta?")
+    st.markdown("Contáctanos por WhatsApp: [+57 300 123 4567](https://wa.me/573001234567) o síguenos en Instagram [@DulcesSuenosPijamas](https://instagram.com).")
+
+
+if __name__ == "__main__":
+    main()
