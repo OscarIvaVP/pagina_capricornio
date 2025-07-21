@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Una aplicación web sencilla con Streamlit para mostrar un catálogo de pijamas y medias.
+Versión con diseño mejorado usando contenedores.
 
 Para ejecutar esta aplicación:
 1. Instala Streamlit: pip install streamlit
@@ -83,38 +84,38 @@ def main():
 
     # --- Sección de Pijamas ---
     st.header("Nuestras Pijamas")
-    # Filtramos la lista para obtener solo las pijamas
     pijamas = [p for p in productos if p["categoria"] == "Pijamas"]
-    # Creamos 3 columnas para mostrar los productos
     cols_pijamas = st.columns(3)
     for i, producto in enumerate(pijamas):
-        # Usamos el operador de módulo para distribuir los productos en las columnas
         with cols_pijamas[i % 3]:
-            st.image(producto["imagen"], caption=producto["nombre"], use_column_width=True)
-            st.subheader(producto["nombre"])
-            st.write(producto["descripcion"])
-            st.success(f"**Precio:** {producto['precio']}")
-            # El botón de compra puede ser un enlace a WhatsApp o simplemente mostrar un mensaje
-            if st.button(f"Comprar {producto['nombre']}", key=f"pijama_{i}"):
-                st.toast(f"¡'{producto['nombre']}' añadido al carrito!", icon="🛒")
+            # **CAMBIO**: Usamos un contenedor con borde para crear un efecto de "tarjeta".
+            with st.container(border=True):
+                # **CORRECCIÓN**: Cambiamos use_column_width por use_container_width.
+                st.image(producto["imagen"], caption=producto["nombre"], use_container_width=True)
+                st.subheader(producto["nombre"])
+                st.write(producto["descripcion"])
+                st.markdown(f"**Precio:** <span style='color: #28B463; font-weight: bold;'>{producto['precio']}</span>", unsafe_allow_html=True)
+                if st.button(f"Comprar {producto['nombre']}", key=f"pijama_{i}"):
+                    st.toast(f"¡'{producto['nombre']}' añadido al carrito!", icon="🛒")
 
 
     st.markdown("---")
 
     # --- Sección de Medias ---
     st.header("Nuestras Medias")
-    # Filtramos la lista para obtener solo las medias
     medias = [p for p in productos if p["categoria"] == "Medias"]
-    # Creamos otras 3 columnas para las medias
     cols_medias = st.columns(3)
     for i, producto in enumerate(medias):
         with cols_medias[i % 3]:
-            st.image(producto["imagen"], caption=producto["nombre"], use_column_width=True)
-            st.subheader(producto["nombre"])
-            st.write(producto["descripcion"])
-            st.info(f"**Precio:** {producto['precio']}")
-            if st.button(f"Comprar {producto['nombre']}", key=f"media_{i}"):
-                st.toast(f"¡'{producto['nombre']}' añadido al carrito!", icon="🛒")
+            # **CAMBIO**: Usamos un contenedor con borde para crear un efecto de "tarjeta".
+            with st.container(border=True):
+                # **CORRECCIÓN**: Cambiamos use_column_width por use_container_width.
+                st.image(producto["imagen"], caption=producto["nombre"], use_container_width=True)
+                st.subheader(producto["nombre"])
+                st.write(producto["descripcion"])
+                st.markdown(f"**Precio:** <span style='color: #28B463; font-weight: bold;'>{producto['precio']}</span>", unsafe_allow_html=True)
+                if st.button(f"Comprar {producto['nombre']}", key=f"media_{i}"):
+                    st.toast(f"¡'{producto['nombre']}' añadido al carrito!", icon="🛒")
 
     # --- Pie de Página ---
     st.markdown("---")
