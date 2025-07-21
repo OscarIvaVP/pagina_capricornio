@@ -24,7 +24,7 @@ def main():
     )
 
     # --- Contenido del Catálogo ---
-    st.markdown("<h1 style='text-align: center; font-size: 4em; font-weight: bold;'>CAPRICORNO</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; font-size: 3em; font-weight: bold;'>CAPRICORNO</h1>", unsafe_allow_html=True)
     st.markdown("<h2 style='text-align: center;'>Catálogo</h2>", unsafe_allow_html=True)
     st.markdown("---")
 
@@ -116,7 +116,7 @@ def main():
     # --- Pie de Página ---
     st.markdown("---")
     st.markdown("### ¿Tienes alguna pregunta?")
-    st.markdown("Contáctanos por WhatsApp: [+57 312 561 4349](https://wa.me/5731256614349) o síguenos en Instagram [@DulcesSuenosPijamas](https://instagram.com).")
+    st.markdown("Contáctanos por WhatsApp: [+57 312 561 4349](https://wa.me/5731256614349) o síguenos en Instagram [@Capricornio](https://instagram.com).")
 
 
 if __name__ == "__main__":
